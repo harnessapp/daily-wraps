@@ -1,4 +1,4 @@
-const DATA_URL = "https://raw.githubusercontent.com/harnessapp/harness-csv-data/main/daily_wraps.json";
+const DATA_URL = "./daily_wraps.json";
 
 async function loadWraps() {
     const container = document.getElementById("wraps-container");
