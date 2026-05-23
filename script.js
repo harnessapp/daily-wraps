@@ -9,7 +9,7 @@ function renderWrapCard(wrap, container) {
 
     const title = document.createElement("div");
     title.className = "wrap-title";
-    title.textContent = wrap.title;
+    title.textContent = wrap.title.replace("Daily Wrap — ", "");
 
     const body = document.createElement("div");
     body.className = "wrap-body";
@@ -53,7 +53,7 @@ function buildArchiveControls() {
     archive.appendChild(monthSelect);
     archive.appendChild(dateSelect);
 
-    container.before(archive);
+    container.after(archive);
 
     const monthNames = [
         "January", "February", "March", "April", "May", "June",
