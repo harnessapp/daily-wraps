@@ -20,11 +20,11 @@ async function loadWraps() {
             const body = document.createElement("div");
             body.className = "wrap-body";
 
-            wrap.body.forEach(paragraph => {
-                const p = document.createElement("p");
-                p.textContent = paragraph;
-                body.appendChild(p);
-            });
+        wrap.body.forEach(paragraph => {
+            const p = document.createElement("p");
+            p.innerHTML = paragraph;
+            body.appendChild(p);
+        });
 
             card.appendChild(title);
             card.appendChild(body);
